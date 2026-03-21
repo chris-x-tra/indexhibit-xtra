@@ -1,0 +1,114 @@
+/**
+* CSS - angepasst an altes Eatock-ähnliches Layout
+*/
+
+body {
+	font-size: 13px;
+	font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
+	background: #fff;
+	color: #000;
+	line-height: 1.4em;
+}
+
+/* link scheme */
+a:link { text-decoration: none; color: #000; }
+a:visited { text-decoration: none; color: #888888; }
+a:hover { text-decoration: underline; }
+a:active { text-decoration: none; color: #00cc00; }
+a img { border: none; }
+audio:focus { outline: none; }
+
+/* general styles */
+small { font-size: 9px; }
+code { font-family: monospace; }
+blockquote { padding-left: 9px; }
+
+/* headings */
+h1 { font-size: 13px; margin-bottom: 1em; font-weight: normal; }
+h2 { font-size: 13px; margin-bottom: 1em; font-weight: normal; }
+h3 { font-size: 13px; margin-bottom: 1em; }
+h4 { font-size: 13px; margin-bottom: 1em; }
+
+/* paragraph width */
+#index p { margin-bottom: 1em; }
+#exhibit p, code, blockquote { width: 600px; margin-bottom: 1em; }
+
+/* highlighter style */
+.highlight { background: #ccff00; color: #000; }
+
+/* Layout: schmale sidebar links, exhibit füllt den rest */
+#index { width: 215px; background: #fff; position: fixed; top: 0; left: 0; height: 100%; overflow-y: auto; }
+#exhibit { margin: 0 0 0 215px; }
+
+/* styling the index */
+#index ul { list-style: none; margin: 0; padding: 0; }
+#index ul.section { margin-bottom: 0.8em; }
+#index ul.subsection { margin-left: 0; }
+
+/* tag display */
+#index ul#all_tags { list-style-type: none; margin-bottom: 1em; }
+#index ul#all_tags li { display: inline; margin-right: 3px; }
+
+/* section titles - uppercase wie im original */
+#index ul.section span.section_title,
+#index ul.section span.section_title a {
+	color: #000;
+	text-transform: uppercase;
+	font-size: 0.85em;
+	font-weight: normal;
+	letter-spacing: 0.05em;
+}
+
+/* active section title */
+#index span.active_section_title,
+#index span.active_section_title a { font-weight: bold; }
+
+/* active exhibit */
+li.active a:link, li a.active, li.active a:hover, li a.active, li.active a:active, li a.active,
+li.active a:visited, li a.active, li span.active, #index ul.section li.active a:link,
+#index ul.section li.active a:hover, #index ul.section li.active a:active, #index ul.section li.active a:visited
+{ font-weight: normal; color: #00f; }
+
+/* new indicator */
+#index ul li sup.new_exhibit { color: #0c0; font-weight: bold; text-transform: uppercase; font-size: 8px; vertical-align: top; }
+#index ul li sup.new_exhibit:before { content: "New"; color: #0c0; }
+
+/* links nur im #index */
+#index a:link { color: #000; }
+#index a:visited { color: #888; }
+#index a:hover { text-decoration: underline; }
+#index a:active { }
+
+/* links nur im #exhibit */
+#exhibit a:link { text-decoration: underline; }
+#exhibit a:visited { }
+#exhibit a:hover { text-decoration: none; }
+#exhibit a:active { }
+
+/* site title / h1 */
+#index h1 { margin-bottom: 0.3em; }
+#index h1 a { font-weight: normal; text-decoration: none; color: #000; font-size: 13px; }
+
+/* padding - mehr oben wie im original */
+.container { padding: 36px 9px 25px 18px; }
+#index .container { padding: 36px 9px 25px 18px; }
+#exhibit .container { padding: 36px 18px 25px 27px; }
+
+/* captions */
+.captioning { margin-top: 2px; }
+.title { font-size: 0.7em; font-style: italic; line-height: 1.2em; }
+.caption { font-size: 0.7em; font-style: italic; line-height: 1.2em; }
+
+/* HOME link oben */
+#index .home_link { 
+	display: block; 
+	margin-bottom: 1.2em; 
+	font-size: 13px;
+	color: #000;
+}
+
+/* /////HOME///// style aus bild 2 loswerden - normales "home" */
+#index #home { 
+	text-transform: lowercase;
+	letter-spacing: 0;
+}
