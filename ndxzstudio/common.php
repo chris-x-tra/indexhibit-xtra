@@ -270,7 +270,7 @@ function front_error($message = '', $code = 404)
 		);
 
 	header('Content-type: text/html; charset=utf-8');
-	header($codes[$code][0]);
+	header('HTTP/1.1 ' . $code . ' ' . $codes[$code][0]);
 	
 	$rs = $OBJ->vars->exhibit;
 	$rs['error_message'] = $message;
