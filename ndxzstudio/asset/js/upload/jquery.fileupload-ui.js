@@ -343,7 +343,8 @@
 			// need to make a max file size for images
 			if (jQuery.inArray(check[check.length - 1], check_image) > -1)
 			{
-				this.options.maxFileSize = (maximagesize * 1000) + 1; 
+				this.options.maxFileSize = 50 * 1024 * 1024 + 1; 	// 50 MB
+				// console.log("size: "+this.options.maxFileSize);	// Debug
 			}
 			else
 			{

@@ -3708,21 +3708,26 @@ $('#mformpop').fileupload('option' ,{ maxNumberOfFiles: 1, acceptFileTypes: /((p
 		$body = "<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
         <div class='row fileupload-buttonbar'>
             <div class='span7 buttons'>
+
                 <!-- The fileinput-button span is used to style the file input field as button -->
                 <span class='btn btn-success fileinput-button add-files'>
                     <span>" . $this->lang->word('Add files') . "</span>
                     <input type='file' name='files[]' multiple>
-                </span>
-                <button type='submit' class='btn btn-primary start'>
+                </span> 
+
+		<button type='submit' class='btn btn-primary start'>
                     <span>" . $this->lang->word('Upload') . "</span>
                 </button>
+
                 <button type='reset' class='btn btn-warning cancel'>
                     <span>" . $this->lang->word('Cancel') . "</span>
                 </button>
+
                 <button type='button' class='btn btn-danger delete' style='display: none;'>
                     <span>" . $this->lang->word('Delete') . "</span>
                 </button>
                 <input type='checkbox' class='toggle' style='display: none;'>
+<div style='clear: both;'></div>
             </div>
             <div class='span5'>
                 <!-- The global progress bar -->
