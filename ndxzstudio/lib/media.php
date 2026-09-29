@@ -231,6 +231,8 @@ class Media
 		$this->getFileType();
 		$this->get_input();
 		
+        if (!file_exists($this->image)) return; // by chrissie
+
 		// original sizes of things
 		$this->size = getimagesize($this->image);
 		$this->orig_kb = str_replace('.', '', @filesize($this->image));
@@ -365,6 +367,8 @@ class Media
 	
 	public function make_image()
 	{
+        if (!file_exists($this->image)) return; // by chrissie
+
 		if ($this->maxsize != 9999)
 		{
 			// get the new sizes
@@ -731,6 +735,8 @@ class Media
 	
 	public function make_thumbnail_proportional()
 	{
+        if (!file_exists($this->image)) return; // by chrissie
+
 		// get the new sizes
 		$this->resizing($this->thumbsize);
 		
@@ -816,6 +822,8 @@ class Media
 	
 	public function make_systhumb()
 	{
+        if (!file_exists($this->image)) return; // by chrissie
+
 		global $default;
 
 		// get the new sizes
@@ -848,6 +856,8 @@ class Media
 	
 	public function make_system()
 	{
+        if (!file_exists($this->image)) return; // by chrissie
+
 		$this->sys_resize();
 
 		$output_image = imagecreatetruecolor($this->sys_thumb, $this->sys_thumb);
@@ -922,6 +932,8 @@ class Media
 	*/
 	public function get_input()
 	{
+        if (!file_exists($this->image)) return; // by chrissie
+
 		switch(strtolower($this->filemime))
 		{
             case 'gif':
@@ -979,6 +991,8 @@ class Media
 	*/
 	public function resizing($maxwidth)
 	{
+        if (!file_exists($this->image)) return; // by chrissie
+
 		$width_percentage = $maxwidth / $this->size[0];
 		$height_percentage = $maxwidth / $this->size[1];
 
